@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+---
+hide:
+  - navigation
+---
+# About
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Interpreter-RegEx is a tool for elementary programming language created for processing regular expressions. There are Quadtree and Matrix operations libraries also. Interpreter has user-friendly console interface; Matrix operations and Quadtree libraries can be used only by developers.
