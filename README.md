@@ -1,31 +1,31 @@
-# Interpreter-RegEx
+# About RegExpInterpreter
 
+
+RegExpInterpreter is an interpreter for the simple programming language designed to work with regular expressions. It also has a libraries for a work with quadtree-matrices and NFA. Last two modules can be used for developers. Interpreter has console interface for users.
+
+# Builds
 ||Badge|
 |------|:------:|
-|**Build Status**|[![GitHub Actions](https://github.com/IvanMoskalenko/Interpreter-RegEx/workflows/Build/badge.svg?branch=master)](https://github.com/IvanMoskalenko/Interpreter-RegEx/actions?query=branch%3Amaster) |
-|**Build History**|[![Build History](https://buildstats.info/github/chart/IvanMoskalenko/Interpreter-RegEx)](https://github.com/IvanMoskalenko/Interpreter-RegEx/actions?query=branch%3Amaster) |
+|**Build Status**|[![GitHub Actions](https://github.com/alexander-kurdakov/RegExpInterpreter/workflows/Build/badge.svg?branch=master)](https://github.com/alexander-kurdakov/RegExpInterpreter/actions?query=branch%3Amaster) |
+|**Build History**|[![Build History](https://buildstats.info/github/chart/alexander-kurdakov/RegExpInterpreter)](https://github.com/alexander-kurdakov/RegExpInterpreter/actions?query=branch%3Amaster) |
 |**Target Framework**|[![Targets](https://img.shields.io/badge/.NET%20-5-green.svg)](https://docs.microsoft.com/ru-ru/dotnet/core/introduction)|
 
 
-Interpreter-RegEx is a tool for elementary programming language created for processing regular expressions. There are Quadtree and Matrix operations libraries also. Interpreter has user-friendly console interface; Matrix operations and Quadtree libraries can be used only by developers.
-
-## Getting Started
+# Getting Started
 
 You can install the package with dotnet by following this steps:
 
-* Add a source in your NuGet.config file
+* Add a source and PAT in your nuget.config file (global or you can make local copy in project directory).
 #
-	dotnet nuget add source "https://nuget.pkg.github.com/IvanMoskalenko/index.json"
-* Authorize with your github token
-#
-	paket config add-token "https://nuget.pkg.github.com/IvanMoskalenko/index.json" <token>
-* Install the package
+	dotnet nuget add source --username <YOUR_USERNAME> --password <PAT> --store-password-in-clear-text --name github "https://nuget.pkg.github.com/alexander-kurdakov/index.json"
+
+* Install the package by using this command or do it in IDE Nuget manager.
 #
 	dotnet add PROJECT package Interpreter-RegEx --version <version>
 
-## Usage and Examples
+# Usage and Examples
 
-Each regular expression is defined as variable which can be used in other expressions. Typical program consists of statements with expressions and variables' names associated with them.
+A regular expression can be defined as variable, which can be used in other expressions. Typical program consists of statements with expressions and variables' names associated with them.
 
 Three statements are supported:
 
@@ -46,30 +46,27 @@ Example:
 	print [d] # output: True
 	print [e] # output: [(1, 2)]
 
-## Documents
+# Documents
 
-Visit [docs](https://www.youtube.com/watch?v=dQw4w9WgXcQ) for full overview of tool.
+Visit [docs](https://alexander-kurdakov.github.io/RegExpInterpreter/) for full overview of tool.
 
-## Directory structure
+# Directory structure
 
 ```
-Interpreter-RegEx
-├── .config - dotnet tools
+RegExpInterpreter
+├── .config - dotnet tools config
 ├── .github - GitHub Actions setup 
-├── docs - documentation web-site
-├── docsSrc - documentation files in .md format
-├── src - code of the tool
+├── docs - documentation files
+├── src - projects directory
 │	├── Interpreter - interpreter of regular expressions
-|	├── Interpreter.Cli - command interface for Interpreter
-|	├── MatrixLib - library of matrix operations based on quadtrees
-|	└── Quadtrees - quadtrees library
-├── tests - tests
-|	├── Interpreter.UnitTests - tests for Interpreter
-|	└── Quadtrees.UnitTests - tests for MatrixLib and Quadtrees
+|	├── ATMLibrary - library for NFA, uses quadtrees as transitions
+|	└── QuadTree - quadtrees library
+├── tests 
+|	├── Interpreter.Tests - tests for Interpreter
+|	├── QuadTree.Tests - tests for QuadTree
+|	└── QuadTree.Tests - tests for QuadTree
 ├── fsharplint.json - linter config
-└── Interpreter.sln - solution file
+├── RegExpInterpreter.sln - solution file
+└── build.fsx - configuration of build
 ```
 	
-
-
-
