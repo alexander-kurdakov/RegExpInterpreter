@@ -64,7 +64,7 @@ RegExpInterpreter
 ├── tests 
 |	├── Interpreter.Tests - tests for Interpreter
 |	├── QuadTree.Tests - tests for QuadTree
-|	└── QuadTree.Tests - tests for QuadTree
+|	└── ATMLibrary.Tests - tests for ATMLibrary
 ├── fsharplint.json - linter config
 ├── RegExpInterpreter.sln - solution file
 └── build.fsx - configuration of build
