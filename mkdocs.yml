@@ -1,4 +1,12 @@
 site_name: RegExpInterpreter
+nav:
+    - 'index.md'
+    - 'Installation.md'
+    - 'Language_guide.md'
+    - 'Interpreter.md'
+    - 'QuadTree.md'
+    - 'ATMLibrary'
+    - 'Structure.md'
 theme:
   name: material
   features:
