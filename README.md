@@ -21,7 +21,7 @@ You can install the package with dotnet by following this steps:
 
 * Install the package by using this command or do it in IDE Nuget manager.
 #
-	dotnet add PROJECT package Interpreter-RegEx --version <version>
+	dotnet add PROJECT package RegExpInterpreter --version <version>
 
 # Usage and Examples
 
