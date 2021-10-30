@@ -5,6 +5,7 @@ QuadTree is a library used in Interpreter as automata transition type.
 ## QuadTree
 ### Type
 An instance of `QuadTree<'t>` is a discriminated union of:
+
 * `Node(QuadTree<'t>, QuadTree<'t>, QuadTree<'t>, QuadTree<'t>)`
 * `Leaf<'t>`
 * `None`
@@ -18,6 +19,7 @@ An instance of `QuadTree<'t>` is a discriminated union of:
 ## ExtendedTree 
 ### Type 
 Extended tree is a QuadTree wrapper type that additionally contains size of tree. Consists of vals:
+
 * `colSize: int`
 * `lineSize: int`
 * `specSize: int`
