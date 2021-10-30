@@ -1,6 +1,6 @@
 # Language guide
 
-Interpreter-RegEx uses simple programming language to define regular expressions.
+RegExpInterpreter uses simple programming language to work with regular expressions.
 
 ## Grammar
 
@@ -19,7 +19,7 @@ There are three types of statements supported in the language:
 * `<vname>` starts with a Latin character, which can be followed by numbers or other letters.
 * `<expression>` consists of Latin letters, digits, characters `'-' '.' '/' '+' '~' ';'` and other variables. As operators characters `'(' ')' '*' '|' '?' '&'` can be used.
 
-## Regex type
+## RegExp type
 
 *    `RSmb of <char>`
 *    `RVar of <VName>`
@@ -53,14 +53,11 @@ Available operators in Interpreter-RegEx:
 
 
 ## Code example
-
-	let [a] = (x|a)a
-	let [b] = a*
-
-	let [c] = isAcceptable "a" [a]&[b]
+	let [x] = (a|b)caba
+	let [c] = isAcceptable "acaba" [x]
 	let [d] = isAcceptable "1" (1*)&(1?)
-	let [e] = findAll "byx" a|y
+	let [e] = findAll "muxa" (x|a)
 
-	print [c] # output: False
-	print [d] # output: True
-	print [e] # output: [(1, 2)]
+	print [c] # True
+	print [d] # True
+	print [e] # [(2, 3); (3, 4)]

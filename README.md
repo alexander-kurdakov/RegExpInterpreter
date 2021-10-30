@@ -35,16 +35,14 @@ Three statements are supported:
 
 Example:
 
-	let [a] = (x|a)a
-	let [b] = a*
-
-	let [c] = isAcceptable "a" [a]&[b]
+	let [x] = (a|b)caba
+	let [c] = isAcceptable "acaba" [x]
 	let [d] = isAcceptable "1" (1*)&(1?)
-	let [e] = findAll "byx" a|y
+	let [e] = findAll "muxa" (x|a)
 
-	print [c] # output: False
-	print [d] # output: True
-	print [e] # output: [(1, 2)]
+	print [c] # True
+	print [d] # True
+	print [e] # [(2, 3); (3, 4)]
 
 # Documents
 
