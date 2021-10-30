@@ -1,4 +1,4 @@
-site_name: Interpreter RegEx
+site_name: RegExpInterpreter
 theme:
   name: material
   features:
