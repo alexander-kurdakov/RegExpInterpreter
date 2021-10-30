@@ -1,8 +1,8 @@
-# QuadTree
+# QuadTree library
 
 QuadTree is a library used in Interpreter as automata transition type.
 
-## QuadTree 
+## QuadTree
 ### Type
 An instance of `QuadTree<'t>` is a discriminated union of:
 * `Node(QuadTree<'t>, QuadTree<'t>, QuadTree<'t>, QuadTree<'t>)`
@@ -10,13 +10,18 @@ An instance of `QuadTree<'t>` is a discriminated union of:
 * `None`
 
 ### Functions
-* `this.noneCheck (neutral: 't)` -  if `this` is `(None, None, None, None)` or `Leaf(neutral)` returns `None`, else return `this`.
-* `this.plus (sndTree: quadTree<'t>) (algebraStruct: AlgebraicStruct<'t>)` - sum of trees in specified algebraic structure.
-* `this.reduce (need: int) (current: int)` - resize of tree, allows to get rid of `(None, None, None, _)`.
-* `this.scalarMultiply (scalar: 't) (multOp: 't -> 't -> 't) (neutral: 't)` - multiplies to `scalar` each element of tree.
+* member `this.noneCheck (neutral: 't)` -  if `this` is `(None, None, None, None)` or `Leaf(neutral)` returns `None`, else return `this`.
+* member `this.plus (sndTree: quadTree<'t>) (algebraStruct: AlgebraicStruct<'t>)` - sum of trees in specified algebraic structure.
+* member `this.reduce (need: int) (current: int)` - resize of tree, allows to get rid of `(None, None, None, _)`.
+* member `this.scalarMultiply (scalar: 't) (multOp: 't -> 't -> 't) (neutral: 't)` - multiplies to `scalar` each element of tree.
 
-## ExtendedTree type
-Extended tree is a QuadTree wrapper type that additionally contains size of tree. Consists of vals: `colSize: int, lineSize: int, tree: QuadTree<'t>`
+## ExtendedTree 
+### Type 
+Extended tree is a QuadTree wrapper type that additionally contains size of tree. Consists of vals: `colSize: int, lineSize: int, specSize: int,  tree: QuadTree<'t>`
+### Functions
+* member `this.toSparseMatrix` - returns `SparceMatrix` equivalent.
+* static member `init (lineSize: int) (colSize:int) (func: int -> int -> 't)` -  initialize ExtendedTree.
+* static member `clearNeutral (neutral: int) (tree: extendedTree<'t>)` - 
 
 ## IMatrix interface 
 QuadTree implements IMatrix interface: 
