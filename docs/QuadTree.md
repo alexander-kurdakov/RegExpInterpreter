@@ -45,6 +45,7 @@ Extended tree is a QuadTree wrapper type that additionally contains size of tree
 ExtendedTree implements IMatrix interface: 
 
 *  `map: ('t -> 'a) -> IMatrix<'a>`
+
 * `iteri: (int -> int -> 't -> unit) -> unit`
 
 * `mapi: (int -> int -> 't -> 'a) -> IMatrix<'a>`
