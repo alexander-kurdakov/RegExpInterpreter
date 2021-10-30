@@ -4,4 +4,4 @@ hide:
 ---
 # About
 
-Interpreter-RegEx is a tool for elementary programming language created for processing regular expressions. There are Quadtree and Matrix operations libraries also. Interpreter has user-friendly console interface; Matrix operations and Quadtree libraries can be used only by developers.
+RegExpInterpreter is an interpreter for the simple programming language designed to work with regular expressions. It also has a libraries for a work with quadtree-matrices and NFA. Last two modules can be used for developers. Interpreter has console interface for users.
