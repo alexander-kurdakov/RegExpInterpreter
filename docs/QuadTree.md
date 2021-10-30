@@ -2,13 +2,14 @@
 
 QuadTree is a library used in Interpreter as automata transition type.
 
-## QuadTree type
+## QuadTree 
+### Type
 An instance of `QuadTree<'t>` is a discriminated union of:
 * `Node(QuadTree<'t>, QuadTree<'t>, QuadTree<'t>, QuadTree<'t>)`
 * `Leaf<'t>`
 * `None`
 
-## QuadTree functions
+### Functions
 * `this.noneCheck (neutral: 't)` -  if `this` is `(None, None, None, None)` or `Leaf(neutral)` returns `None`, else return `this`.
 * `this.plus (sndTree: quadTree<'t>) (algebraStruct: AlgebraicStruct<'t>)` - sum of trees in specified algebraic structure.
 * `this.reduce (need: int) (current: int)` - resize of tree, allows to get rid of `(None, None, None, _)`.
