@@ -11,7 +11,7 @@ RegExpInterpreter
 ├── docs - documentation files
 ├── src - projects directory
 │	├── Interpreter - interpreter of regular expressions
-|	├── ATMLibrary - library for NFA, can use quadtrees as transitions
+|	├── ATMLibrary - NFA library, can use quadtrees as transitions
 |	└── QuadTree - quadtrees library
 ├── tests 
 |	├── Interpreter.Tests - tests for Interpreter

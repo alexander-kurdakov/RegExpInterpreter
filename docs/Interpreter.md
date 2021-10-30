@@ -16,9 +16,9 @@ Then you can run the `Interpreter.run <AST>` function that returns two dictionar
 let program = "
 
 let [x] = (a|b)caba
-let [c] = isAcceptable "acaba" [x]
-let [d] = isAcceptable "1" (1*)&(1?)
-let [e] = findAll "muxa" (x|a)
+let [c] = isAcceptable \"acaba\" [x]
+let [d] = isAcceptable \"1\" (1*)&(1?)
+let [e] = findAll \"muxa\" (x|a)
 
 print [c]
 print [d]
@@ -31,9 +31,9 @@ printfn "%A" pDict.["print"]
 
 Given code prints
     ```
-    False       
     True
-    [(1, 2)]
+    True
+    [(2, 3);(3, 4)]
     ```
 into console.
 
