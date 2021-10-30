@@ -48,7 +48,7 @@ Example:
 
 Visit [docs](https://alexander-kurdakov.github.io/RegExpInterpreter/) for full overview of tool.
 
-# Directory structure
+# Repository structure
 
 ```
 RegExpInterpreter
