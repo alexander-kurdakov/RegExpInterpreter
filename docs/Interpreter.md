@@ -24,8 +24,7 @@ print [d]
 print [e]"
 
 let ast = Interpreter.parseProgramToAST program
-let _, pDict = Interpreter.run ast
-printfn "%A" pDict.["print"]
+Interpreter.run ast
 ```
 
 Given code prints
