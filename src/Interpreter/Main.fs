@@ -24,7 +24,8 @@ let main (argv: string array) =
     let parser = ArgumentParser.Create<CLIArguments>(programName = "Interpreter")
     let results = parser.Parse(argv)
     let p = parser.ParseCommandLine argv
-    if argv.Length = 0 || results.IsUsageRequested then parser.PrintUsage() |> printfn "%s"
+    if argv.Length = 0 || results.IsUsageRequested
+    then parser.PrintUsage() |> printfn "%s"
     else
         let input =
             if p.Contains(InputFile) then System.IO.File.ReadAllText (results.GetResult InputFile)
@@ -32,8 +33,7 @@ let main (argv: string array) =
             else failwith "No input code given"
         let ast = textToAST input
         if p.Contains(Compute)
-            then
-                let _, _, pD = run ast
-                printfn "%s" pD.["print"] 
+        then run ast
+               
     0
     

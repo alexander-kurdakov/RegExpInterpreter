@@ -97,7 +97,7 @@ let processExpr vDict expression =
     | AST.RegExp re -> RE(processRE vDict re)
 
 
-let processStmt (vDict: Dictionary<_, _>) (pDict: Dictionary<string, string>) stmt =
+let processStmt (vDict: Dictionary<_, _>) stmt =
     match stmt with
     | AST.Print value ->
         let varData =
@@ -112,9 +112,9 @@ let processStmt (vDict: Dictionary<_, _>) (pDict: Dictionary<string, string>) st
 
         let printConst = "print"
         match varData with
-        | RE reVal -> pDict.[printConst] <- (pDict.[printConst] + reVal.ToString() + "\n")
-        | Bool boolVal -> pDict.[printConst] <- (pDict.[printConst] + boolVal.ToString() + "\n")
-        | Lst lValues -> pDict.[printConst] <- (pDict.[printConst] + lValues.ToString() + "\n")
+        | RE reVal -> printfn $"{reVal.ToString()}"
+        | Bool boolVal ->printfn $"{boolVal.ToString()}"
+        | Lst lValues -> printfn $"{lValues.ToString()}"
     
     | AST.VDecl (value, expr) ->
         if vDict.ContainsKey value then
@@ -139,17 +139,13 @@ let processStmt (vDict: Dictionary<_, _>) (pDict: Dictionary<string, string>) st
             runtimeException.Trigger msg // generate event
             failwith _msg
 
-    vDict, pDict
+    vDict
 
 
 let run program =
     let vDict = Dictionary<_, _>()
-    let pDict = Dictionary<_, _>()
-    let varDict = Dictionary<_, _>()
-    pDict.Add("print", "") // to avoid exception in 107 - 109
-    let vD, _pD =
-        List.fold (fun (d1, d2) -> processStmt d1 d2) (vDict, pDict) program
-    vD, varDict, pDict
+    let vD = List.fold processStmt vDict program
+    ()
 
 
 let textToAST text =
