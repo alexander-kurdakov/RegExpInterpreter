@@ -38,5 +38,13 @@ let testInterpreter =
         testCase "Empty findAll test" <| fun _ ->
             let x = "let [x] = findAll \"abb\" x|y"
             Expect.equal "[]" (evaluateExpr (textToAST x)).ToString ""
+            
+        testCase "fail test #1" <| fun _ ->
+            let x = "let x] = findAll \"abb\" x|y"
+            Expect.throws (fun () -> (evaluateExpr (textToAST x)) |> ignore) ""
+            
+        testCase "fail test #2" <| fun _ ->
+            let x = "let [x] =, isAcceptable \"12521\" (1|2)*"
+            Expect.throws (fun () -> (evaluateExpr (textToAST x)) |> ignore) ""
     ]
     
