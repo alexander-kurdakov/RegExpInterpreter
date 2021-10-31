@@ -1,14 +1,13 @@
 # Interpreter
 ## Developers
 
-To interpret your code, at first you need to create an abstract syntax tree by using `Interpreter.textToAST <string>`
-
-Then you can run the `Interpreter.run <AST>` function that returns two dictionaries. The first contains values of all variables in `Interpreter.VType` format, the second has only one key - `"print"` with interpretation result in `string` format.
+To interpret your code, at first you need to create an abstract syntax tree by using `Interpreter.textToAST <string>`.
+Then you can run the `Interpreter.run <AST>` to execute your program. 
 
 ### Another functions
 
 * `processExpr (vDict: Dictionary<AST.VName, VType>) (expression: AST.Expr)` - return a result of a given expression in `VType` format.
-* `processStmt (vDict: Dictionary<AST.VName, VType>) (pDict: Dictionary<string, string>) (stmt: AST.Stmt)` - gets an expression from statement and sets it's value to the dictionaries with variable as a key.
+* `processStmt (vDict: Dictionary<AST.VName, VType>) (stmt: AST.Stmt)` - gets an expression from statement and sets it's value to the dictionary with variable as a key.
 
 ### Example
 
