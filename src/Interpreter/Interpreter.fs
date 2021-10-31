@@ -145,7 +145,6 @@ let processStmt (vDict: Dictionary<_, _>) stmt =
 let run program =
     let vDict = Dictionary<_, _>()
     let vD = List.fold processStmt vDict program
-    ()
 
 
 let textToAST text =
