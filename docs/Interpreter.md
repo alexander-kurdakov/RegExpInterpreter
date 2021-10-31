@@ -39,10 +39,9 @@ into console.
 
 ## Users
 
-There are four console commands in RegExpInterpreter.
+There are three console commands in RegExpInterpreter.
 
 * `--inputfile <file path>` - the path to the file with code.
 * `--inputstring <string>` - the string with code.
 * `--compute` - returns the result of interpretation of the code
 	
-Just run "RegExpInterpreter.exe" from console with given commands.
