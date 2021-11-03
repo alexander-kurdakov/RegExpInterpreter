@@ -56,5 +56,3 @@ seq_elem: SMB {AST.RSmb($1)}
         | seq_elem OPT {AST.Opt($1)}
 
 vname: VNAME {AST.Var($1)}
-
-eof: EOF {1}

@@ -110,7 +110,6 @@ let processStmt (vDict: Dictionary<_, _>) stmt =
 
                 failwithf $"Variable {value} is not declared."
 
-        let printConst = "print"
         match varData with
         | RE reVal -> printfn $"{reVal.ToString()}"
         | Bool boolVal ->printfn $"{boolVal.ToString()}"
