@@ -1,0 +1,17 @@
+site_name: RegExpInterpreter
+nav:
+    - Home: 'index.md'
+    - 'Installation.md'
+    - 'Language_guide.md'
+    - 'Interpreter.md'
+    - 'QuadTree.md'
+    - 'ATMLibrary.md'
+    - 'Structure.md'
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - toc.integrate
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
