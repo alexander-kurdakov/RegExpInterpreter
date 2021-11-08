@@ -96,7 +96,7 @@ Target.create "Test" (fun _ ->
 )
 
 Target.create "Docs" (fun _ ->
-    exec "dotnet"  @"fornax build" "docs"
+   exec "dotnet"  @"fornax build" "docs"
 )
 
 // --------------------------------------------------------------------------------------
